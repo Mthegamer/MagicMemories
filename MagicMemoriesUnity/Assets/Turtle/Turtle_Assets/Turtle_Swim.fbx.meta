@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 2552c6e046c2b414599b3700b99139f9
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: xiao_gui:body
+    100004: xiao_gui:gg
+    100006: xiao_gui:joint1
+    100008: xiao_gui:joint10
+    100010: xiao_gui:joint10 1
+    100012: xiao_gui:joint11
+    100014: xiao_gui:joint11 1
+    100016: xiao_gui:joint12
+    100018: xiao_gui:joint13
+    100020: xiao_gui:joint14
+    100022: xiao_gui:joint19
+    100024: xiao_gui:joint2
+    100026: xiao_gui:joint23
+    100028: xiao_gui:joint3
+    100030: xiao_gui:joint4
+    100032: xiao_gui:joint5
+    100034: xiao_gui:joint6
+    100036: xiao_gui:joint6 1
+    100038: xiao_gui:joint7
+    100040: xiao_gui:joint7 1
+    100042: xiao_gui:joint8
+    100044: xiao_gui:joint8 1
+    100046: xiao_gui:joint9
+    100048: xiao_gui:polySurface1
+    100050: xiao_gui:pSphere1
+    100052: xiao_gui:pSphere2
+    100054: xiao_gui:up_ctrl
+    100056: xiao_gui:yangj
+    100058: xiaogui
+    400000: //RootNode
+    400002: xiao_gui:body
+    400004: xiao_gui:gg
+    400006: xiao_gui:joint1
+    400008: xiao_gui:joint10
+    400010: xiao_gui:joint10 1
+    400012: xiao_gui:joint11
+    400014: xiao_gui:joint11 1
+    400016: xiao_gui:joint12
+    400018: xiao_gui:joint13
+    400020: xiao_gui:joint14
+    400022: xiao_gui:joint19
+    400024: xiao_gui:joint2
+    400026: xiao_gui:joint23
+    400028: xiao_gui:joint3
+    400030: xiao_gui:joint4
+    400032: xiao_gui:joint5
+    400034: xiao_gui:joint6
+    400036: xiao_gui:joint6 1
+    400038: xiao_gui:joint7
+    400040: xiao_gui:joint7 1
+    400042: xiao_gui:joint8
+    400044: xiao_gui:joint8 1
+    400046: xiao_gui:joint9
+    400048: xiao_gui:polySurface1
+    400050: xiao_gui:pSphere1
+    400052: xiao_gui:pSphere2
+    400054: xiao_gui:up_ctrl
+    400056: xiao_gui:yangj
+    400058: xiaogui
+    2300000: xiao_gui:pSphere1
+    2300002: xiao_gui:pSphere2
+    3300000: xiao_gui:pSphere1
+    3300002: xiao_gui:pSphere2
+    4300000: xiao_gui:polySurface1
+    4300002: xiao_gui:pSphere1
+    4300004: xiao_gui:pSphere2
+    7400000: Swim
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: xiao_gui:polySurface1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Swim
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 54
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: xiaogui
+        weight: 1
+      - path: xiaogui/xiao_gui:body
+        weight: 1
+      - path: xiaogui/xiao_gui:body/xiao_gui:polySurface1
+        weight: 1
+      - path: xiaogui/xiao_gui:gg
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint1
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint1/xiao_gui:joint2
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint1/xiao_gui:joint2/xiao_gui:joint3
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint1/xiao_gui:joint2/xiao_gui:yangj
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint1/xiao_gui:joint2/xiao_gui:yangj/xiao_gui:pSphere1
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint1/xiao_gui:joint2/xiao_gui:yangj/xiao_gui:pSphere2
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint5
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint5/xiao_gui:joint6
+          1
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint5/xiao_gui:joint6
+          1/xiao_gui:joint7 1
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint5/xiao_gui:joint6
+          1/xiao_gui:joint7 1/xiao_gui:joint8 1
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint9
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint9/xiao_gui:joint10
+          1
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint9/xiao_gui:joint10
+          1/xiao_gui:joint11 1
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint12
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint12/xiao_gui:joint13
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint12/xiao_gui:joint13/xiao_gui:joint14
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint19
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint19/xiao_gui:joint6
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint19/xiao_gui:joint6/xiao_gui:joint7
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint19/xiao_gui:joint6/xiao_gui:joint7/xiao_gui:joint8
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint23
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint23/xiao_gui:joint10
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:joint4/xiao_gui:joint23/xiao_gui:joint10/xiao_gui:joint11
+        weight: 1
+      - path: xiaogui/xiao_gui:gg/xiao_gui:up_ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 2
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

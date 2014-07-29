@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="FridgeStickerConcept" size="100.000000 109.434639" />
+    <ImageTarget name="SkopeLogo2" size="100.000000 52.142857" />
+    <ImageTarget name="SkopeLogo1" size="100.000000 59.090908" />
+  </Tracking>
+</QCARConfig>

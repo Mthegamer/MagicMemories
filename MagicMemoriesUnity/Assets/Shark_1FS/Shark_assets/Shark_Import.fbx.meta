@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: a38fb30cd554db34e9fbe1acb641ce40
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Fin_L1
+    100002: Fin_L2
+    100004: Fin_R1
+    100006: Fin_R2
+    100008: Head
+    100010: HeadFin_Rotation
+    100012: Reef_Shark
+    100014: Reef_Shark_SRT
+    100016: //RootNode
+    100018: Tail1
+    100020: Tail2
+    100022: Torso1
+    100024: Torso2
+    100026: Torso3
+    100028: Torso4
+    400000: Fin_L1
+    400002: Fin_L2
+    400004: Fin_R1
+    400006: Fin_R2
+    400008: Head
+    400010: HeadFin_Rotation
+    400012: Reef_Shark
+    400014: Reef_Shark_SRT
+    400016: //RootNode
+    400018: Tail1
+    400020: Tail2
+    400022: Torso1
+    400024: Torso2
+    400026: Torso3
+    400028: Torso4
+    4300000: Reef_Shark
+    7400000: Swim
+    7400002: Jump
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Reef_Shark
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Swim
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 50
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Reef_Shark
+        weight: 1
+      - path: Reef_Shark_SRT
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation/Fin_L1
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation/Fin_L1/Fin_L2
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation/Fin_R1
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation/Fin_R1/Fin_R2
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation/Head
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1/Torso2
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1/Torso2/Torso3
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1/Torso2/Torso3/Torso4
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1/Torso2/Torso3/Torso4/Tail1
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1/Torso2/Torso3/Torso4/Tail1/Tail2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 51
+      lastFrame: 130
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Reef_Shark
+        weight: 1
+      - path: Reef_Shark_SRT
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation/Fin_L1
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation/Fin_L1/Fin_L2
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation/Fin_R1
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation/Fin_R1/Fin_R2
+        weight: 1
+      - path: Reef_Shark_SRT/HeadFin_Rotation/Head
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1/Torso2
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1/Torso2/Torso3
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1/Torso2/Torso3/Torso4
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1/Torso2/Torso3/Torso4/Tail1
+        weight: 1
+      - path: Reef_Shark_SRT/Torso1/Torso2/Torso3/Torso4/Tail1/Tail2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
