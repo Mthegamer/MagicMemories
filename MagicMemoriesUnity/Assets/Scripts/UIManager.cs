@@ -16,6 +16,10 @@ public class UIManager : MonoBehaviour {
 	public GameObject SharkModel;
 	public GameObject TurtleModel;
 
+	public GameObject CharacterSelectShark;
+	public GameObject CharacterSelectTurtle;
+
+
 	public GameObject TrackingHint;
 	public GameObject Button_Back;
 	public GameObject Button_FactFinder;
@@ -27,9 +31,6 @@ public class UIManager : MonoBehaviour {
 	public GameObject TurtleHotspots;
 
 	private UILabel animalName_Lbl;
-
-
-
 	private Animation currentAnimation;
 
 	private Animation screenTween1;
@@ -58,13 +59,17 @@ public class UIManager : MonoBehaviour {
 		SAM = GameObject.Find("SharkModel").GetComponent<SharkAnimManager>();
 		TAM = GameObject.Find("TurtleModel").GetComponent<TurtleAnimManager>();
 		FM = GameObject.Find("Manager").GetComponent<FactManager>();
-		SMC = GameObject.Find("SharkParent").GetComponent<SharkMovementController>();
+		SMC = GameObject.Find("AnimalParent").GetComponent<SharkMovementController>();
 
 		Screen_Main = GameObject.Find("Panel 1");
 		Screen_Experience = GameObject.Find("Panel 2");
 
 		SharkModel = GameObject.Find("SharkModel");
 		TurtleModel = GameObject.Find("TurtleModel");
+
+		CharacterSelectShark = GameObject.Find("CS_Shark");
+		CharacterSelectTurtle = GameObject.Find("CS_Turtle");
+
 
 		TrackingHint = GameObject.Find("TrackingHint");
 		Button_Back = GameObject.Find("Back_Btn");
@@ -157,9 +162,6 @@ public class UIManager : MonoBehaviour {
 			ToggleHotspots(true);
 			currentScreen=2;
 			SMC.SetCanMove(false);
-			
-
-
 		}
 
 		//Exit hotspot view
@@ -190,10 +192,15 @@ public class UIManager : MonoBehaviour {
 
 		// Back to the main menu
 		else if(transitionNumber==6){
+
+			CharacterSelectShark.SetActive(true);
+			CharacterSelectTurtle.SetActive(true);
 			//OpenPOI(1,false);
 			anim = ActiveAnimation.Play(dropdownmenuTween, "", Direction.Reverse,EnableCondition.DoNothing,DisableCondition.DoNotDisable);
 			dropdownOpen = false;
 			screenTransition(0);
+
+
 		}
 
 		// Go to sealife page
@@ -255,6 +262,20 @@ public class UIManager : MonoBehaviour {
 			currentAnimal=0;
 		}
 
+		SelectCharacterModel(currentAnimal);
+
+	}
+
+	public void SelectCharacterModel(int characterNumber){
+		
+
+		if(currentAnimal!=characterNumber){
+			CharacterSelectShark.SetActive(false);
+			CharacterSelectTurtle.SetActive(false);
+			anim = ActiveAnimation.Play(animalSwapTween, "", Direction.Toggle,EnableCondition.DoNothing,DisableCondition.DoNotDisable);
+		}
+		currentAnimal = characterNumber;
+
 		//If shark selected
 		if(currentAnimal==0){
 			SharkModel.SetActive(true);
@@ -272,7 +293,6 @@ public class UIManager : MonoBehaviour {
 		CM.ChangeAnimal(currentAnimal);
 
 		Debug.Log("currentAnimal: " + currentAnimal);
-
 	}
 
 	public void ToggleInstructions(bool on){
@@ -316,11 +336,11 @@ public class UIManager : MonoBehaviour {
 
 			if(zoomIn){
 				TrackingHint.SetActive(false);
-				SAM.ChangeAnim(2);
+				//SAM.ChangeAnim(2);
 			}
 
 			else{
-				SAM.ChangeAnim(0);
+				//SAM.ChangeAnim(0);
 			}
 		}
 
@@ -330,11 +350,11 @@ public class UIManager : MonoBehaviour {
 
 			if(zoomIn){
 				TrackingHint.SetActive(false);
-				TAM.ChangeAnim(2);
+				//TAM.ChangeAnim(2);
 			}
 
 			else{
-				TAM.ChangeAnim(0);
+				//TAM.ChangeAnim(0);
 			}
 		}
 
@@ -346,6 +366,7 @@ public class UIManager : MonoBehaviour {
 		
 
 	}
+
 
 	public void TogglePOI(bool on){ 
 		Debug.Log("FACT PANEL:" + on);

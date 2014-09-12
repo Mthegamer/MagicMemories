@@ -33,6 +33,8 @@ public class SharkAnimManager : MonoBehaviour {
 
 			else if(animationNumber==2){
 				animation.Play ("Idle");
+			//	animation.Play ("Swim");
+
 			}
 
 

@@ -23,13 +23,13 @@ public class CameraManager : MonoBehaviour {
 
 	void Awake(){
 		Camera_AR = GameObject.Find("ARCamera");
-		Camera_Shark = GameObject.Find("SharkCamera");
+		Camera_Shark = GameObject.Find("AnimalCamera");
 
 		C_AR = Camera_AR.GetComponent<Camera>();
 		C_Shark = Camera_Shark.GetComponent<Camera>();
 
-		SharkCamPoint = GameObject.Find("CameraFollowPoint").GetComponent<Transform>();
-		SharkCamPoint2 = GameObject.Find("CameraFollowPoint2").GetComponent<Transform>();
+		SharkCamPoint = GameObject.Find("CameraFollowPoint_Shark").GetComponent<Transform>();
+		SharkCamPoint2 = GameObject.Find("CameraFollowPoint_Turtle").GetComponent<Transform>();
 	}
 
 	// Use this for initialization

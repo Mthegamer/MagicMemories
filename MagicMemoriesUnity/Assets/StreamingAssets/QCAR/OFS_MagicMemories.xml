@@ -2,5 +2,6 @@
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
     <ImageTarget name="OFS_MagicMemories_Marker" size="100.000000 69.611435" />
+    <ImageTarget name="OFS_MagicMemories_Turtle" size="100.000000 71.832649" />
   </Tracking>
 </QCARConfig>

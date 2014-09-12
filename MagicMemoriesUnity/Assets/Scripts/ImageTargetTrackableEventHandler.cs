@@ -11,6 +11,7 @@ public class ImageTargetTrackableEventHandler : MonoBehaviour,
                                             ITrackableEventHandler
 {
     private UIManager UIM;
+    public int animalTrackingNumber = 0;
 
 
     #region PUBLIC_MEMBER_VARIABLES
@@ -63,6 +64,7 @@ public class ImageTargetTrackableEventHandler : MonoBehaviour,
     private void OnTrackingFound()
     {
         UIM.SetCurrentlyTracking(true);
+        UIM.SelectCharacterModel(animalTrackingNumber);
 
         isBeingTracked = true;
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
