@@ -27,7 +27,7 @@ public class TriggerSharkAnim : MonoBehaviour {
 
     void OnMouseDown() {
 
-		#if (UNITY_ANDROID)
+		#if (UNITY_ANDROID || UNITY_IPHONE)
 
 		Debug.Log("TOUCH:" + Input.touches.Length);
 		for(int i = 0; i < Input.touches.Length; i++)//How many touches do we have? 
@@ -63,7 +63,7 @@ public class TriggerSharkAnim : MonoBehaviour {
 
 	#endif
 
-	#if (!UNITY_ANDROID)
+	#if (UNITY_EDITOR)
 
 	                        SAM.ChangeAnim(1);
 

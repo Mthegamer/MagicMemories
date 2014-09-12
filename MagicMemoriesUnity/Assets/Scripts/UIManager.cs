@@ -267,6 +267,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void SelectCharacterModel(int characterNumber){
+		if(currentScreen!=2){
 		
 
 		if(currentAnimal!=characterNumber){
@@ -293,6 +294,7 @@ public class UIManager : MonoBehaviour {
 		CM.ChangeAnimal(currentAnimal);
 
 		Debug.Log("currentAnimal: " + currentAnimal);
+		}
 	}
 
 	public void ToggleInstructions(bool on){
