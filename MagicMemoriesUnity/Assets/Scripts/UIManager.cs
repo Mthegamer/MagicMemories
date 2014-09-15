@@ -16,10 +16,6 @@ public class UIManager : MonoBehaviour {
 	public GameObject SharkModel;
 	public GameObject TurtleModel;
 
-	public GameObject CharacterSelectShark;
-	public GameObject CharacterSelectTurtle;
-
-
 	public GameObject TrackingHint;
 	public GameObject Button_Back;
 	public GameObject Button_FactFinder;
@@ -48,6 +44,7 @@ public class UIManager : MonoBehaviour {
 
 	private int currentAnimal = 0;
 	private int currentScreen = 0;
+	private int currentMarker = 0;
 
 	private bool currentlyTracking = false;
 
@@ -66,10 +63,6 @@ public class UIManager : MonoBehaviour {
 
 		SharkModel = GameObject.Find("SharkModel");
 		TurtleModel = GameObject.Find("TurtleModel");
-
-		CharacterSelectShark = GameObject.Find("CS_Shark");
-		CharacterSelectTurtle = GameObject.Find("CS_Turtle");
-
 
 		TrackingHint = GameObject.Find("TrackingHint");
 		Button_Back = GameObject.Find("Back_Btn");
@@ -159,6 +152,7 @@ public class UIManager : MonoBehaviour {
 
 		//Start the hotspot view
 		else if(transitionNumber==1){
+			EnableCharacterModel(currentAnimal);
 			ToggleHotspots(true);
 			currentScreen=2;
 			SMC.SetCanMove(false);
@@ -166,8 +160,11 @@ public class UIManager : MonoBehaviour {
 
 		//Exit hotspot view
 		else if(transitionNumber==2){
+			//DisableModels();
+			
 			ToggleHotspots(false);
 			currentScreen=1;
+			SelectCharacterModel();
 		}
 
 		// Close the fact overlay
@@ -193,8 +190,8 @@ public class UIManager : MonoBehaviour {
 		// Back to the main menu
 		else if(transitionNumber==6){
 
-			CharacterSelectShark.SetActive(true);
-			CharacterSelectTurtle.SetActive(true);
+			SMC.ResetMoveTarget();
+
 			//OpenPOI(1,false);
 			anim = ActiveAnimation.Play(dropdownmenuTween, "", Direction.Reverse,EnableCondition.DoNothing,DisableCondition.DoNotDisable);
 			dropdownOpen = false;
@@ -239,6 +236,13 @@ public class UIManager : MonoBehaviour {
 			anim = ActiveAnimation.Play(screenTween1, "", Direction.Reverse,EnableCondition.DoNothing,DisableCondition.DoNotDisable);
 			anim = ActiveAnimation.Play(screenTween2, "", Direction.Reverse,EnableCondition.DoNothing,DisableCondition.DoNotDisable);
 		}
+
+		SelectCharacterModel();
+	}
+
+
+	public void SetMarkerNumber(int marker){
+		currentMarker = marker;
 	}
 
 	public void swapCharacter(int dir){
@@ -262,39 +266,64 @@ public class UIManager : MonoBehaviour {
 			currentAnimal=0;
 		}
 
-		SelectCharacterModel(currentAnimal);
-
-	}
-
-	public void SelectCharacterModel(int characterNumber){
-		if(currentScreen!=2){
-		
-
-		if(currentAnimal!=characterNumber){
-			CharacterSelectShark.SetActive(false);
-			CharacterSelectTurtle.SetActive(false);
-			anim = ActiveAnimation.Play(animalSwapTween, "", Direction.Toggle,EnableCondition.DoNothing,DisableCondition.DoNotDisable);
-		}
-		currentAnimal = characterNumber;
-
-		//If shark selected
 		if(currentAnimal==0){
-			SharkModel.SetActive(true);
-			TurtleModel.SetActive(false);
 			animalName_Lbl.text = "Reef Shark";
 		}
 
 		//If Turtle
 		if(currentAnimal==1){
-			SharkModel.SetActive(false);
-			TurtleModel.SetActive(true);
 			animalName_Lbl.text = "Green Sea Turtle";
 		}
 
-		CM.ChangeAnimal(currentAnimal);
+		EnableCharacterModel(currentAnimal);
+
+
+		//SelectCharacterModel();
+
+	}
+
+	public void SelectCharacterModel(){
+		if(currentScreen==1){
+
+		Debug.Log("Menu: " + currentAnimal + "   Marker: " + currentMarker);
+		if(currentAnimal==currentMarker){
+			//If shark selected
+			EnableCharacterModel(currentAnimal);
+
 
 		Debug.Log("currentAnimal: " + currentAnimal);
 		}
+
+		else{
+			DisableModels();
+		}
+		}
+	}
+
+	public void EnableCharacterModel(int modelNumber){
+		if(modelNumber==0){
+				SharkModel.SetActive(true);
+				TurtleModel.SetActive(false);
+				//animalName_Lbl.text = "Reef Shark";
+			}
+
+			//If Turtle
+			if(modelNumber==1){
+				SharkModel.SetActive(false);
+				TurtleModel.SetActive(true);
+			//	animalName_Lbl.text = "Green Sea Turtle";
+			}
+		CM.ChangeAnimal(currentAnimal);
+
+	}
+
+	public void DisableModels(){
+		SharkModel.SetActive(false);
+		TurtleModel.SetActive(false);
+	}
+
+	public int GetCurrentAnimal(){
+		return currentAnimal;
 	}
 
 	public void ToggleInstructions(bool on){
@@ -426,7 +455,7 @@ public class UIManager : MonoBehaviour {
 
 	public void OpenSealifePage ()
 	{	 
-	 Application.OpenURL("http://www.visitsealife.com");
+	 Application.OpenURL("http://www.sealifetrust.org");
 	}
 	 
 }

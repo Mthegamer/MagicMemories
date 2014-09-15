@@ -81,8 +81,13 @@ public class SharkMovementController : MonoBehaviour {
 	}
 
 	public void SetCanMove(bool can){
-		Debug.Log("CAN I MOVE SHARK:" + can);
+		//Debug.Log("CAN I MOVE SHARK:" + can);
 		canMove = can;
+	}
+
+	public void ResetMoveTarget(){
+		Debug.Log("RESET");
+		Target.position = new Vector3(0f,Target.position.y,0f);
 	}
 
 }
