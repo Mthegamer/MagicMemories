@@ -4,6 +4,8 @@ using AnimationOrTween;
 
 public class UIManager : MonoBehaviour {
 
+	public GoogleAnalyticsV3 googleAnalytics;
+
 	public CameraManager CM;
 	public SharkAnimManager SAM;
 	public TurtleAnimManager TAM;
@@ -52,6 +54,8 @@ public class UIManager : MonoBehaviour {
 	private bool dropdownMainOpen = false;
 
 	void Awake(){
+		googleAnalytics = GameObject.Find("GAv3").GetComponent<GoogleAnalyticsV3>();
+
 		CM = GameObject.Find("Manager").GetComponent<CameraManager>();
 		SAM = GameObject.Find("SharkModel").GetComponent<SharkAnimManager>();
 		TAM = GameObject.Find("TurtleModel").GetComponent<TurtleAnimManager>();
@@ -454,7 +458,9 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void OpenSealifePage ()
-	{	 
+	{
+	 Debug.Log("ANALYTICS FIRE");
+	 googleAnalytics.LogEvent("URL_link", "Clicked", "sealifetrust.org", 1);	 
 	 Application.OpenURL("http://www.sealifetrust.org");
 	}
 	 
