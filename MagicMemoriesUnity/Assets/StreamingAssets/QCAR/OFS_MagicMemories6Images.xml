@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="OFS_MagicMemories_Turtle" size="100.000000 71.832649" />
+    <ImageTarget name="OFS_MagicMemories_Marker" size="100.000000 69.611435" />
+    <ImageTarget name="OFS_MEAQ_SharkRay" size="100.000000 34.842628" />
+    <ImageTarget name="OFS_MEAQ_Turtle" size="100.000000 34.897846" />
+    <ImageTarget name="OFS_SLML_SharkSpread" size="100.000000 34.861034" />
+    <ImageTarget name="OFS_SLML_TurtleSpread" size="100.000000 34.842628" />
+  </Tracking>
+</QCARConfig>

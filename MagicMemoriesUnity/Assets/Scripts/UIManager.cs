@@ -207,7 +207,7 @@ public class UIManager : MonoBehaviour {
 		// Go to sealife page
 		else if(transitionNumber==7){
 			//OpenPOI(1,false);
-			OpenSealifePage();
+			OpenSealifeTrustPage();
 		}
 
 		// Close App
@@ -215,6 +215,10 @@ public class UIManager : MonoBehaviour {
 			//OpenPOI(1,false);
 			Debug.Log("QUIT");
 			Application.Quit();
+		}
+
+		else if(transitionNumber==9){
+			OpenVisitSealifePage();
 		}
 	}
 
@@ -457,11 +461,18 @@ public class UIManager : MonoBehaviour {
 
 	}
 
-	public void OpenSealifePage ()
+	public void OpenSealifeTrustPage ()
 	{
-	 Debug.Log("ANALYTICS FIRE");
+	// Debug.Log("ANALYTICS FIRE");
 	 googleAnalytics.LogEvent("URL_link", "Clicked", "sealifetrust.org", 1);	 
 	 Application.OpenURL("http://www.sealifetrust.org");
+	}
+
+	public void OpenVisitSealifePage ()
+	{
+	// Debug.Log("ANALYTICS FIRE");
+	 googleAnalytics.LogEvent("URL_link", "Clicked", "visitsealife.org", 1);	 
+	 Application.OpenURL("http://www.visitsealife.com");
 	}
 	 
 }

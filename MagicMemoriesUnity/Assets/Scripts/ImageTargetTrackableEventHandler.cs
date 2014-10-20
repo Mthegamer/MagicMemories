@@ -12,6 +12,7 @@ public class ImageTargetTrackableEventHandler : MonoBehaviour,
 {
     private UIManager UIM;
     public int animalTrackingNumber = 0;
+    private WaterLayerManager WLM;
 
 
     #region PUBLIC_MEMBER_VARIABLES
@@ -25,6 +26,7 @@ public class ImageTargetTrackableEventHandler : MonoBehaviour,
     #region PUBLIC_METODS
     void Start()
     {
+        WLM = this.GetComponent<WaterLayerManager>();
         UIM = GameObject.Find("Manager").GetComponent<UIManager>();
 
 
@@ -63,6 +65,8 @@ public class ImageTargetTrackableEventHandler : MonoBehaviour,
     #region PRIVATE_METHODS
     private void OnTrackingFound()
     {
+        WLM.ResizeWaterLayer();
+
         UIM.SetCurrentlyTracking(true);
         UIM.SetMarkerNumber(animalTrackingNumber);
         UIM.SelectCharacterModel();
